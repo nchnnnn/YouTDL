@@ -1,0 +1,130 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10%;
+}
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar completely */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid red;
+}
+body {
+  background-color: #171717;
+  scroll-padding-top: 50%;
+  height: 100dvh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+form {
+  width: clamp(300px, 45vw, 45%);
+}
+
+.title {
+  display: block;
+  color: white;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+#navbar {
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+  /* background-color: #242424; */
+}
+
+#navbar.show {
+  transform: translateY(0); /* Show it on scroll */
+}
+
+a {
+  all: unset;
+  color: rgb(255, 0, 0);
+  margin-left: 2rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+span {
+  color: white;
+}
+
+form {
+  margin-top: 6rem;
+}
+
+input {
+  outline: none;
+  padding: 1.3rem;
+  box-shadow: none;
+  border: 1px solid white;
+  width: 100%;
+  background-color: #171717;
+  border-radius: 5rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  transition: all 300ms 60ms ease;
+}
+
+input:focus {
+  border-radius: 1.5rem;
+}
+label {
+  color: rgb(255, 255, 255);
+}
+
+button {
+  width: 100%;
+  text-align: center;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: 1px solid rgba(255, 255, 255, 0.815);
+  background-color: rgb(37, 37, 37);
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  outline: 1px solid rgb(255, 255, 255);
+  border-radius: 0.2rem;
+}
+
+p {
+  font-weight: 1000;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+  color: #ffffff98;
+}
+
+p:hover {
+  color: white;
+}
+
+#random {
+  margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(40vw, 50vw, 1000px);
+  background-color: rgb(255, 255, 255);
+  height: 70vh;
+}
+
+.embeded {
+  width: 100%;
+}
